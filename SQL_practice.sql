@@ -1,23 +1,12 @@
--- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
--- CSC 343: Group Assignment 2
--- Fall 2019 | UTM
-
--- Parter 1's Name: Tahir Muhammad
-
--- Parter 2's Name: Charbel El Feghali
-
-
--- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
--- BEGIN
--- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 -- ++++++++++++++++++++
 --  Q1
 -- ++++++++++++++++++++
 
-SELECT HName, City FROM Hospital
-WHERE AnnualBudget > 3000000
-ORDER BY AnnualBudget DESC;
+-- Write a query that shows all of the rows for which song_name is null. 
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end
+  WHERE song_name IS null;
 
 -- ++++++++++++++++++++
 --  Q2
