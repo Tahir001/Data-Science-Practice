@@ -1,13 +1,91 @@
-
 -- ++++++++++++++++++++
 --  Q1
 -- ++++++++++++++++++++
-
 -- Write a query that shows all of the rows for which song_name is null. 
 SELECT * 
   FROM tutorial.billboard_top_100_year_end
   WHERE song_name IS null;
 
+-- ++++++++++++++++++++
+--  Q2
+-- ++++++++++++++++++++
+-- Write a query that surfaces all rows for top-10 hits for which Ludacris is part of the Group. 
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end
+  WHERE "group" ilike '%Ludacris' AND year_rank <= 10
+
+-- ++++++++++++++++++++
+--  Q3 
+-- ++++++++++++++++++++
+-- Write a query that surfaces the top-ranked records in 1990, 2000, and 2010.   
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end
+  WHERE year in (1990, 2000, 2010) AND year_rank = 1;
+
+-- ++++++++++++++++++++
+--  Q4 
+-- ++++++++++++++++++++
+-- Write a query that lists all songs from the 1960s with "love" in the title. 
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end
+  WHERE year BETWEEN 1960 AND 1969 AND song_name ilike '%love%'
+
+-- ++++++++++++++++++++
+--  Q5 
+-- ++++++++++++++++++++
+-- Question 
+-- Write a query that returns all rows for top-10 songs that featured either Katy Perry or Bon Jovi. 
+SELECT * 
+FROM tutorial.billboard_top_100_year_end
+WHERE artist = 'Katy Perry' OR artist = 'Bon Jovi'
+
+-- ++++++++++++++++++++
+--  Q6
+-- ++++++++++++++++++++
+-- Question 
+-- Write a query that returns all songs with titles that contain the word "California" in either the 1970s or 1990s. 
+SELECT * 
+FROM tutorial.billboard_top_100_year_end
+WHERE song_name ilike '%California%' AND (year BETWEEN 1970 AND 1979 OR year BETWEEN 1990 and 1999)
+
+-- ++++++++++++++++++++
+--  Q7
+-- ++++++++++++++++++++
+-- Question 
+-- Write a query that lists all top-100 recordings that feature Dr. Dre before 2001 or after 2009. 
+SELECT * 
+FROM tutorial.billboard_top_100_year_end
+WHERE "group" like '%Dr. Dre%' AND (year <2001 OR year > 2009) 
+
+-- ++++++++++++++++++++
+--  Q8
+-- ++++++++++++++++++++
+-- Write a query that returns all rows for songs that were on the charts in 2013 and do not contain the letter "a".
+SELECT *
+FROM tutorial.billboard_top_100_year_end
+WHERE year = 2013
+AND "group" NOT ILIKE '%a%'
+
+-- ++++++++++++++++++++
+--  Q9
+-- ++++++++++++++++++++
+-- Write a query that returns all rows for songs that were on the charts in 2013 and do not contain the letter "a".
+SELECT *
+FROM tutorial.billboard_top_100_year_end
+WHERE year = 2013
+AND "group" NOT ILIKE '%a%'
+
+-- ++++++++++++++++++++
+--  Q10
+-- ++++++++++++++++++++
+-- Write a query that returns all rows for songs that were on the charts in 2013 and do not contain the letter "a".
+SELECT *
+FROM tutorial.billboard_top_100_year_end
+WHERE year = 2013
+AND "group" NOT ILIKE '%a%'
+
+
+---------------------------- HEALTH DATABASE ANSWERS ----------------------------
 -- ++++++++++++++++++++
 --  Q2
 -- ++++++++++++++++++++
